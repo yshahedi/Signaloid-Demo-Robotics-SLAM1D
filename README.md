@@ -46,19 +46,19 @@ If no command line arguments are supplied, the default values shown above will b
 ## Program Output
 As each measurement (row in the CSV file) is processed by the SLAM algorithm, the application prints out its latest estimate for the system state i.e. position estimates for the robot and for the observed landmarks.
 
-<img width="600" alt="Example stdout for the application" src="resources/output.png">
+<img width="800" alt="Example stdout for the application" src="resources/output.png">
 
 After each iteration, you should be able to see that the variance in the uncertainty of each landmark position estimate decreases: as the robot moves through its environment and gathers more information about its surroundings, a more accurate map of these surroundings can be made.
 
 For example, when running the application with the default input parameters, the uncertainty in the estimate for the position of Landmark 0 looks like this after one measurement is processed:
 
-<img width="600" alt="Landmark 0 position uncertainty distribution after one iteration" src="resources/landmark_0_1.png">
+<img width="400" alt="Landmark 0 position uncertainty distribution after one iteration" src="resources/landmark_0_1.png">
 
 <br>
 
 By the time the 10th measurement has been processed, the distribution looks like this:
 
-<img width="600" alt="Landmark 0 position uncertainty distribution after ten iterations" src="resources/landmark_0_10.png">
+<img width="400" alt="Landmark 0 position uncertainty distribution after ten iterations" src="resources/landmark_0_10.png">
 
 <br>
 
@@ -66,7 +66,7 @@ Note that, as mentioned above, the accuracy of the uncertainty distribution for 
 
 By default, the distribution will look something like this:
 
-<img width="600" alt="Example of robot position uncertainty distribution" src="resources/positionUncertainty.png">
+<img width="400" alt="Example of robot position uncertainty distribution" src="resources/positionUncertainty.png">
 
 The accuracy can be improved by increasing the number of particles used in the particle filter, however this will increase the time taken for the program to run.
 
